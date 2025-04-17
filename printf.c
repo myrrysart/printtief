@@ -128,6 +128,59 @@ int	handle_x(va_list args)
 	}
 	return (count);
 }
+
+int	handle_cases(char *format, va_list args, int count)
+{
+	int	i;
+
+	i = 0;
+	if (*format == 'c')
+		i = handle_c(args);
+	else if (*format == 's')
+		i = handle_s(args);
+//	else if (*format == 'p')
+//		i = handle_p(args);
+	else if (*format == 'd' || *format == 'i')
+		i = handle_d(args);
+//	else if (*format == 'u')
+//		i = handle_u(args);
+	else if (*format == 'x')
+		i = handle_x(args);
+	else if (*format == 'X')
+		i = handle_X(args);
+	else
+		return (-1);
+	return (count + i);
+}
+int	ft_printf(char *format, ...)
+{
+	va_list	args;
+	int		count;
+
+	count = 0;
+	va_start(args, format);
+	while (*format)
+	{
+		if (*format == '%')
+		{
+			format++;
+			if (*format == '%')
+				write(1, format, 1);
+			else
+			{
+				count = handle_cases(format, args, count);
+				if (count < 0)
+					return (count);
+			}
+		}
+		else
+			write(1, format, 1);
+		format++;
+		count++;
+	}
+	return (count);
+}
+
 int	main(void)
 {
 	printf("testing if I can still code anything. :D");
