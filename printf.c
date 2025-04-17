@@ -25,6 +25,17 @@ int	handle_c(va_list args)
 	write(1, &c, 1);
 	return (1);
 }
+
+int	handle_d(va_list args)
+{
+	char	*str;
+	int		len;
+
+	str = itoa(va_arg(args, int));
+	len = strlen(str);
+	write(1, str, len);
+	return (len);
+}
 int	main(void)
 {
 	printf("testing if I can still code anything. :D");
