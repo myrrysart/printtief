@@ -12,6 +12,8 @@
 
 #ifndef    PRINTF_H
 # define    PRINTF_H
+# define    HEXLOW "0123456789abcdef"
+# define    HEXHIGH "0123456789ABCDEF"
 
 //for INT_MIN & INT_MAX
 #include <limits.h>
