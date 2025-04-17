@@ -104,6 +104,30 @@ int	handle_X(va_list args)
 	}
 	return (count);
 }
+
+int	handle_x(va_list args)
+{
+	char	str[16];
+	int		i;
+	int		num;
+	int		count;
+
+	i = 0;
+	count = 0;
+	num = va_arg(args, int);
+	while (num > 0)
+	{
+		str[i] = HEXLOW[num % 16];
+		num /= 16;
+		i++;
+	}
+	while (i > 0)
+	{
+		i--;
+		write(1, &str[i], 1);
+	}
+	return (count);
+}
 int	main(void)
 {
 	printf("testing if I can still code anything. :D");
