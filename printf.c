@@ -183,5 +183,9 @@ int	ft_printf(char *format, ...)
 
 int	main(void)
 {
-	printf("testing if I can still code anything. :D");
-	ft_printf("
+	char	*str = "Testing if I can still code anything. :D\n";
+	int		i = ft_printf("%% And rest of some text%s    AND MORE TEXT\n", str);
+	printf("%s", str);
+	printf("%d", i);
+	return (0);
+}
