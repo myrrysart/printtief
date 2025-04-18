@@ -6,7 +6,7 @@
 /*   By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:48:02 by jyniemit          #+#    #+#             */
-/*   Updated: 2025/04/17 17:28:26 by jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:25:01 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,12 @@
 //write
 #include <unistd.h>
 //prototypes
-int	ft_printf(char *format, ...);
+int	ft_printf(const char *format, ...);
+int	handle_c(va_list args);
+int	handle_s(va_list args);
+int	handle_u(va_list args);
+int	handle_d(va_list args);
+int	handle_p(va_list args);
+int	handle_x(va_list args);
+int	handle_X(va_list args);
 # endif
