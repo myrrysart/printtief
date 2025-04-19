@@ -6,7 +6,7 @@
 /*   By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:27:13 by jyniemit          #+#    #+#             */
-/*   Updated: 2025/04/18 16:20:16 by jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/19 12:33:13 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
@@ -19,13 +19,13 @@ static int	handle_p_hex(unsigned long num)
 
 	count = 0;
 	i = 0;
-	while(num > 0)
+	while (num > 0)
 	{
 		str[i] = HEXLOW[num % 16];
 		num /= 16;
 		i++;
 	}
-	while(i >0)
+	while (i > 0)
 	{
 		i--;
 		write(1, &str[i], 1);
@@ -36,9 +36,9 @@ static int	handle_p_hex(unsigned long num)
 
 int	handle_p(va_list args)
 {
-	void	*ptr;
+	void			*ptr;
 	unsigned long	num;
-	int		count;
+	int				count;
 
 	ptr = va_arg(args, void *);
 	if (!ptr)
@@ -55,5 +55,5 @@ int	handle_p(va_list args)
 	count = 2;
 	num = (unsigned long)ptr;
 	count += handle_p_hex(num);
-	return(count);
+	return (count);
 }
