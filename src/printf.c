@@ -56,32 +56,21 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		count;
+	int		i;
 
 	count = 0;
 	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%')
-		{
-			format++;
-			if (*format == '%')
-			{
-				write(1, "%", 1);
-				count++;
-			}
-			else
-			{
-				count = handle_cases(format, args, count);
-				if (count < 0)
-					return (count);
-			}
-		}
+			i = handle_format(&format, args);
 		else
-		{
-			write(1, format, 1);
-			count++;
-		}
+			i = write_char(*format);
+		if (i < 0)
+			return (-1);
+		count += i;
 		format++;
 	}
+	va_end(args);
 	return (count);
 }
