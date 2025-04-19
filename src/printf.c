@@ -1,6 +1,6 @@
 #include "printf.h"
 
-static int	handle_cases(const char *format, va_list args, int count)
+static int	handle_cases(const char *format, va_list args)
 {
 	int	i;
 
@@ -16,12 +16,12 @@ static int	handle_cases(const char *format, va_list args, int count)
 	else if (*format == 'u')
 		i = handle_u(args);
 	else if (*format == 'x')
-		i = handle_x(args);
+		i = handle_hex_low(args);
 	else if (*format == 'X')
-		i = handle_X(args);
+		i = handle_hex_up(args);
 	else
 		return (-1);
-	return (count + i);
+	return (i);
 }
 
 int	ft_printf(const char *format, ...)
