@@ -6,7 +6,7 @@
 /*   By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 15:18:00 by jyniemit          #+#    #+#             */
-/*   Updated: 2025/04/18 15:52:35 by jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/19 12:57:44 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
@@ -14,6 +14,7 @@
 int	handle_c(va_list args)
 {
 	char	c;
+
 	c = (char)va_arg(args, int);
 	write(1, &c, 1);
 	return (1);

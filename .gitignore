@@ -2,3 +2,4 @@ notes
 include/printf.h.gch
 a.out
 testprintfmain.c
+src/.printf.c.swp
