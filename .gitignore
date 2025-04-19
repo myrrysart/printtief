@@ -3,3 +3,5 @@ include/printf.h.gch
 a.out
 testprintfmain.c
 src/.printf.c.swp
+include/ft_printf.h.gch
+printfTester

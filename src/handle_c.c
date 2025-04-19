@@ -6,10 +6,10 @@
 /*   By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 15:18:00 by jyniemit          #+#    #+#             */
-/*   Updated: 2025/04/19 12:57:44 by jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/19 14:30:07 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "ft_printf.h"
 
 int	handle_c(va_list args)
 {

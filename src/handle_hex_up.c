@@ -6,10 +6,10 @@
 /*   By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:23:22 by jyniemit          #+#    #+#             */
-/*   Updated: 2025/04/19 11:02:47 by jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/19 15:13:04 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "ft_printf.h"
 
 int	handle_hex_up(va_list args)
 {

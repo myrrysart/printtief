@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:48:02 by jyniemit          #+#    #+#             */
-/*   Updated: 2025/04/19 12:58:19 by jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/19 14:28:30 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef    PRINTF_H
-# define    PRINTF_H
+#ifndef    FT_PRINTF_H
+# define    FT_PRINTF_H
 # define    HEXLOW "0123456789abcdef"
 # define    HEXHIGH "0123456789ABCDEF"
 

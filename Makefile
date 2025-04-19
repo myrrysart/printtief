@@ -6,7 +6,7 @@
 #    By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/18 14:29:30 by jyniemit          #+#    #+#              #
-#    Updated: 2025/04/18 16:06:39 by jyniemit         ###   ########.fr        #
+#    Updated: 2025/04/19 15:50:48 by jyniemit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,14 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -Isrc -Iinclude
 DEBUGFLAG = -g
 SRCPATH = ./src
-SRCS = printf.c handle_x.c handle_X.c handle_u.c handle_d.c handle_p.c\
-       handle_s.c handle_c.c
-
+SRCS = ft_printf.c \
+		handle_hex_low.c \
+		handle_hex_up.c \
+		handle_u.c \
+		handle_d.c \
+		handle_p.c \
+		handle_s.c \
+		handle_c.c \
 
 OBJPATH = ./obj
 OBJS = $(addprefix $(OBJPATH)/, $(SRCS:.c=.o))
@@ -35,13 +40,16 @@ $(OBJPATH):
 	mkdir -p $(OBJPATH)
 
 clean:
-	@rm -rf $(OBJPATH)
+	@echo "removing object files."
+	rm -rf $(OBJPATH)
 
 fclean:clean
-	@rm -f $(NAME)
+	@echo "removing $(NAME)"
+	rm -f $(NAME)
 
 re:fclean all
 
 debug: CFLAGS += $(DEBUGFLAG)
 debug: re
+	@echo "Building a debug version of the executable by adding -g to flags"
 .PHONY:re fclean clean all debug
