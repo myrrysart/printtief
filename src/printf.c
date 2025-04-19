@@ -36,6 +36,11 @@ static int	handle_cases(const char *format, va_list args)
 	return (i);
 }
 
+static int	write_char(char c)
+{
+	return (write(1, &c, 1));
+}
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
