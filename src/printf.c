@@ -41,6 +41,17 @@ static int	write_char(char c)
 	return (write(1, &c, 1));
 }
 
+static int	handle_format(const char **format, va_list args)
+{
+	int	i;
+
+	(*format)++;
+	if (**format == '%')
+		return (write_char('%'));
+	i = handle_cases(*format, args);
+	return (i);
+}
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
