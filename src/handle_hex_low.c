@@ -23,8 +23,8 @@ int	handle_hex_low(va_list args)
 	num = va_arg(args, unsigned int);
 	if (num == 0)
 	{
-		write(1, "(nil)", 5);
-		return (5);
+		write(1, "0", 1);
+		return (1);
 	}
 	while (num > 0)
 	{
