@@ -6,7 +6,7 @@
 /*   By: jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:27:13 by jyniemit          #+#    #+#             */
-/*   Updated: 2025/04/19 14:30:07 by jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/20 12:29:15 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -45,11 +45,6 @@ int	handle_p(va_list args)
 	{
 		write(1, "(nil)", 5);
 		return (5);
-	}
-	if (ptr == 0)
-	{
-		write(1, "0x0", 3);
-		return (3);
 	}
 	write(1, "0x", 2);
 	count = 2;
