@@ -5,3 +5,5 @@ testprintfmain.c
 src/.printf.c.swp
 include/ft_printf.h.gch
 printfTester
+obj
+libftprintf.a
